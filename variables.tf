@@ -28,19 +28,21 @@ variable "numcpus" {
 variable "vm_time_zone" {
   type = "string"
 }
+variable "domain_name" {
+    type = "string"
+}
 variable "vm_name" {
- type = "string"   
+    type = "map"
 }
 variable "host_name" {
-  type = "string"
- }
-variable "count_ip" {
-   type = "string" 
+  type = "map"
 }
-variable "dns_servers" {
-  type = "string"
+variable "count_ip" {
+   type = "map"
+}
+variable "dns_server" {
+  type = "list"
 }
 variable "gateway" {
   type = "string"
 }
-
