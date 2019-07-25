@@ -53,7 +53,7 @@ resource "vsphere_virtual_machine" "vm" {
         customize {
             linux_options {
                  host_name = "${lookup(var.host_name, count.index)}"
-                 domain = "atl.lan"
+                 domain = "${var.domain_name}"
                  time_zone = "${var.vm_time_zone}"
            }
 
